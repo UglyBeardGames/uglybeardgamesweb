@@ -40,29 +40,42 @@
 	--hover-color: #00FFFF;
 }
 
+.site{
+	display: grid;
+  	grid-template-columns: 1fr; /* Single column by default (mobile) */
+  	gap: 20px; /* Space between columns */
+	justify-content: start;
+}
+
+/* Switches to two columns on screens wider than 768px */
+@media (min-width: 768px) {
+  .site {
+    grid-template-columns: 0.5fr 1fr; /* Two equal columns */
+  }
+}
+
+
 .sidebar{
-	float: left;
-	margin-right: -100%;
-	max-width: 413px;
-	width: 30%;
-	top: 1px;
 	background-color: #fff;
+	margin: 1em;
+}
+
+.content{
+}
+
+footer{
 }
 
 .site-header{
 	background-color: transparent;
     border-bottom: 0;
-    margin: 20% 0;
-    padding: 0 20%;
+    margin: 10% 0;
+    padding: 0 10%;
 }
 
 .site-branding{
 	min-height: 0;
     padding: 0;
-}
-
-.custom-logo{
-	max-height: none;
 }
 
 .site-title{
@@ -73,10 +86,6 @@
 }
 
 .site-content{
-	display:block;
-	float:left;
-	margin-left: 30%;
-	width: 70%;
 }
 
 .site-description{
@@ -88,22 +97,13 @@
 	opacity: 0.7;
 }
 
-.site{
-	margin: 0 auto;
-	max-width: 1403px;
-}
-
-.site-main{
-	padding: 8% 0;
-}
-
 .widget-area{
 	margin: 0 auto 0;
 }
 
 .widget{
-	margin: 0 0 20%;
-	padding: 0 20%;
+	margin: 0 0 10%;
+	padding: 0 10%;
 }
 
 .widget-title{
@@ -135,7 +135,7 @@
 
 .home-article{
 	padding-top: 8%;
-	margin: 0 8%;
+	margin: 1em;
 	box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
 	position: relative;
 	background-color: #fff;
@@ -159,15 +159,15 @@
 }
 
 .small-page{
-	margin: 0 8%;
-	padding: 0 10%;
+	margin: 1em;
+	padding: 1em;
 	padding-bottom: 10%;
 	background-color: #fff;
 }
 
-/* Global stylesheet */
-* {
-	box-sizing: border-box;
+img {
+  max-width: 100%; /* Ensures the image doesn't exceed its container's width */
+  height: auto;    /* Automatically calculates the height to maintain aspect ratio */
 }
 
 html,
@@ -183,12 +183,12 @@ body {
 html {
 	font-size: 62.5%;
 	overflow-y: scroll;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 footer {
-	float: left;
-	margin: 0 0 0 35.5%;
-	width: 59%;
+	margin:0 1em;
 	padding: 0;
 	border-top: 0;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
@@ -206,8 +206,15 @@ a:focus {
 	color: rgba(51, 51, 51, 0.7);
 }
 
+a[href^="mailto:"] {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
 #built-with{
-	padding: 5% 10%;
+	display: flex;
+	justify-content: center;
 }
 
 .home-article a,
@@ -223,11 +230,6 @@ a:focus {
 	color: #707070;
 	color: rgba(51, 51, 51, 0.7);
 	text-decoration: none;
-}
-
-div.embedded-youtube{
-	width: 660px;
-	height: 371px;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -256,6 +258,9 @@ div.embedded-youtube{
 	z-index: 999;
 }
 
+
+
+
 /* OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF */
 /* OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF */
 /* OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF */
@@ -269,10 +274,6 @@ div.embedded-youtube{
 	</head>
 	<body>
 		<div id="page" class="site">
-			<a href="#main" id="skip-link" class="visually-hidden">Skip to main content</a>
-
-			
-
 			<div id="sidebar" class="sidebar">
 				<header class="site-header">
 					<div class="site-branding">
@@ -326,14 +327,8 @@ div.embedded-youtube{
 
 					</main><!-- .site-main -->
 				</div><!-- .content-area -->
-			</div>
-				
-								
-
-			<heading-anchors>
-				
-			</heading-anchors>
-
+			</div>		
+			<div></div>
 			<footer>
 				<div id="built-with">
 					<p class="p-footer">
@@ -343,7 +338,7 @@ div.embedded-youtube{
 			</footer>
 		</div>
 
-		<!-- This page `/tags/home-data/` was built on 2026-01-09T01:01:25.909Z -->
+		<!-- This page `/tags/home-data/` was built on 2026-01-09T05:07:43.633Z -->
 		<script type="module" src="/uglybeardgamesweb/dist/cC8wS6ZjFU.js"></script>
 	</body>
 </html>
