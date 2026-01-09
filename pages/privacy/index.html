@@ -41,12 +41,12 @@
 }
 
 .sidebar{
-	position: fixed;
 	float: left;
 	margin-right: -100%;
 	max-width: 413px;
 	width: 30%;
 	top: 1px;
+	background-color: #fff;
 }
 
 .site-header{
@@ -79,9 +79,90 @@
 	width: 70%;
 }
 
+.site-description{
+	font-size: 16px;
+	color: #333;
+	font-weight: 400;
+	line-height: 1.5;
+	font-style: normal;
+	opacity: 0.7;
+}
+
 .site{
 	margin: 0 auto;
 	max-width: 1403px;
+}
+
+.site-main{
+	padding: 8% 0;
+}
+
+.widget-area{
+	margin: 0 auto 0;
+}
+
+.widget{
+	margin: 0 0 20%;
+	padding: 0 20%;
+}
+
+.widget-title{
+	text-transform: uppercase;
+	color: #333;
+	font-weight: 700;
+	font-size: 16px;
+	letter-spacing: 0.05em;
+}
+
+
+.widget_pages ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+.page_item{
+	list-style: none;
+	border-top: 1px solid rgba(51, 51, 51, 0.1);
+	padding: 0.5em 0;
+	font-size: 16px;
+}
+
+.page_item:first-child{
+	border-top: 0;
+}
+
+.home-article{
+	padding-top: 8%;
+	margin: 0 8%;
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+	position: relative;
+	background-color: #fff;
+}
+
+.home-article-header{
+	padding: 0 10%;
+}
+
+.home-article-content{
+	padding: 0 10% 10%;
+}
+
+.entry-title{
+	line-height: 1.2;
+	margin-bottom: 1.2em;
+}
+
+.home-article-content p{
+	margin-bottom: 1.7em;
+}
+
+.small-page{
+	margin: 0 8%;
+	padding: 0 10%;
+	padding-bottom: 10%;
+	background-color: #fff;
 }
 
 /* Global stylesheet */
@@ -91,22 +172,88 @@
 
 html,
 body {
-	
+	background: #f1f1f1;
 	margin: 0;
 	font-family: var(--font-family);
-	font-size: 15px;
+	font-size: 19px;
 	color: var(--text-color);
-	background-color: var(--body-background-color);
-	
+	color: #333;
 }
+
 html {
 	font-size: 62.5%;
 	overflow-y: scroll;
 }
 
+footer {
+	float: left;
+	margin: 0 0 0 35.5%;
+	width: 59%;
+	padding: 0;
+	border-top: 0;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+	background-color: #fff;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	color: #707070;
+	color: rgba(51, 51, 51, 0.7);
+}
+
+#built-with{
+	padding: 5% 10%;
+}
+
+.home-article a,
+.small-page a{
+	color: #333;
+	text-decoration: underline;
+}
+
+.home-article a:hover,
+.home-article a:focus,
+.small-page a:hover,
+.small-page a:focus {
+	color: #707070;
+	color: rgba(51, 51, 51, 0.7);
+	text-decoration: none;
+}
+
 div.embedded-youtube{
 	width: 660px;
 	height: 371px;
+}
+
+/* https://www.a11yproject.com/posts/how-to-hide-content/ */
+.visually-hidden:not(:focus):not(:active) {
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	white-space: nowrap;
+	width: 1px;
+}
+
+#skip-link {
+	text-decoration: none;
+	background: var(--background-color);
+	color: var(--text-color);
+}
+
+/* Prevent visually-hidden skip link fom pushing content around when focused */
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	/* Ensure it is positioned on top of everything else when it is shown */
+	z-index: 999;
 }
 
 /* OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF  OLD STUFF */
@@ -118,8 +265,7 @@ div.embedded-youtube{
 
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-		<link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+		<link href="https://fonts.googleapis.com/css2?family=Fugaz+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 	</head>
 	<body>
 		<div id="page" class="site">
@@ -128,13 +274,13 @@ div.embedded-youtube{
 			
 
 			<div id="sidebar" class="sidebar">
-				<header>
+				<header class="site-header">
 					<div class="site-branding">
-						<a class="custom-logo-link" href="https://www.uglybeardgames.com/" rel="home">
+						<a class="custom-logo-link" href="/uglybeardgamesweb/" rel="home">
 							<picture><source type="image/avif" srcset="/uglybeardgamesweb/img/v0xyUJGk79-248.avif 248w"><source type="image/webp" srcset="/uglybeardgamesweb/img/v0xyUJGk79-248.webp 248w"><img loading="lazy" decoding="async" src="/uglybeardgamesweb/img/v0xyUJGk79-248.png" class="custom-logo" alt="Ugly Beard Games" width="248" height="248"></picture>
 						</a>
 						<p class="site-title">
-							<a href="https://www.uglybeardgames.com/" rel="home">Ugly Beard Games, LLC </a>
+							<a href="/uglybeardgamesweb/" rel="home">Ugly Beard Games, LLC </a>
 						</p>
 						<p class="site-description">A two person, one beard indie game studio.</p>
 					</div>
@@ -163,7 +309,11 @@ div.embedded-youtube{
 				<div id="primary" class="content-area">
 					<main id="main" class="site-main" role="main">
 						
+
 <div class="small-page">
+
+	
+
     <h1 class="page-title" id="privacy-policy">Privacy Policy</h1>
 
     <h4 id="data-we-collect-and-how-we-use-it">Data We Collect And How We Use It</h4>
@@ -191,13 +341,13 @@ div.embedded-youtube{
 			<footer>
 				<div id="built-with">
 					<p class="p-footer">
-						<em>Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a></em>
+						Built with <a href="https://www.11ty.dev/">Eleventy v3.1.2</a>
 					</p>
 				</div>
 			</footer>
 		</div>
 
-		<!-- This page `/pages/privacy/` was built on 2026-01-08T05:27:45.208Z -->
+		<!-- This page `/pages/privacy/` was built on 2026-01-09T01:01:25.871Z -->
 		<script type="module" src="/uglybeardgamesweb/dist/cC8wS6ZjFU.js"></script>
 	</body>
 </html>
