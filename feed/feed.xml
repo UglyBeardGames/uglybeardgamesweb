@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet href="pretty-atom-feed.xsl" type="text/xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-  <title>Blog Title</title>
-  <subtitle>This is a longer description about your blog.</subtitle>
-  <link href="https://example.com/uglybeardgamesweb/feed/feed.xml" rel="self" />
-  <link href="https://example.com/uglybeardgamesweb/" />
+  <title>Ugly Beard Games</title>
+  <subtitle>A two person, one beard indie game studio.</subtitle>
+  <link href="https://uglybeardgames.com/uglybeardgamesweb/feed/feed.xml" rel="self" />
+  <link href="https://uglybeardgames.com/uglybeardgamesweb/" />
   <updated>2018-04-13T00:00:00Z</updated>
-  <id>https://example.com/uglybeardgamesweb/</id>
+  <id>https://uglybeardgames.com/uglybeardgamesweb/</id>
   <author>
-    <name>Your Name</name>
+    <name>uglybeard</name>
   </author>
   <entry>
     <title>Our Games</title>
-    <link href="https://example.com/uglybeardgamesweb/pages/homepage/" />
+    <link href="https://uglybeardgames.com/uglybeardgamesweb/pages/homepage/" />
     <updated>2018-04-13T00:00:00Z</updated>
-    <id>https://example.com/uglybeardgamesweb/pages/homepage/</id>
-    <content type="html">&lt;p&gt;&lt;a href=&quot;https://example.com/uglybeardgamesweb/pages/crawlers-and-brawlers/&quot;&gt;Crawlers And Brawlers&lt;/a&gt;&lt;/p&gt;
+    <id>https://uglybeardgames.com/uglybeardgamesweb/pages/homepage/</id>
+    <content type="html">&lt;p&gt;&lt;a href=&quot;https://uglybeardgames.com/uglybeardgamesweb/pages/crawlers-and-brawlers/&quot;&gt;Crawlers And Brawlers&lt;/a&gt;&lt;/p&gt;
 &lt;div id=&quot;isIvi_0U6NQ&quot; class=&quot;embedded-youtube&quot; style=&quot;position:relative;width:100%;padding-top: 56.25%;&quot;&gt;&lt;iframe style=&quot;position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;&quot; width=&quot;100%&quot; height=&quot;100%&quot; frameborder=&quot;0&quot; title=&quot;Embedded YouTube video&quot; src=&quot;https://www.youtube-nocookie.com/embed/isIvi_0U6NQ&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
-&lt;p&gt;&lt;a href=&quot;https://example.com/uglybeardgamesweb/pages/void-vikings/&quot;&gt;Void Vikings&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://uglybeardgames.com/uglybeardgamesweb/pages/void-vikings/&quot;&gt;Void Vikings&lt;/a&gt;&lt;/p&gt;
 &lt;div id=&quot;jCaJetrBCy8&quot; class=&quot;embedded-youtube&quot; style=&quot;position:relative;width:100%;padding-top: 56.25%;&quot;&gt;&lt;iframe style=&quot;position:absolute;top:0;right:0;bottom:0;left:0;width:100%;height:100%;&quot; width=&quot;100%&quot; height=&quot;100%&quot; frameborder=&quot;0&quot; title=&quot;Embedded YouTube video&quot; src=&quot;https://www.youtube-nocookie.com/embed/jCaJetrBCy8&quot; allow=&quot;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&quot; allowfullscreen loading=&quot;lazy&quot;&gt;&lt;/iframe&gt;&lt;/div&gt;
 </content>
   </entry>
